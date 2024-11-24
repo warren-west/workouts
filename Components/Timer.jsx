@@ -3,6 +3,7 @@ import { Button, Pressable, Text, View } from 'react-native'
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 import { calcColorTime } from '../utils'
 import { styles, COUNTDOWN_COLORS } from '../styling'
+import { useAudioPlayer } from 'expo-audio'
 
 export default function Timer({ isDouble = false }) {
     const DEFAULT_TIME = 60
@@ -10,11 +11,11 @@ export default function Timer({ isDouble = false }) {
     // time to count down in seconds
     const [timerKey, setTimerKey] = useState(0)
     const [timeToCountDown, setTimeToCountDown] = useState(DEFAULT_TIME)
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false)    
 
     // timer sounds
-    const finishedAudio = new Audio('assets/audio/finished.wav')
-    const chirpAudio = new Audio('assets/audio/chirp.wav')
+    const finishedAudio = useAudioPlayer('assets/audio/finished.wav')
+    const chirpAudio = useAudioPlayer('assets/audio/chirp.wav')
 
     const handleToggleIsPlaying = () => setIsPlaying(!isPlaying)
 

@@ -1,0 +1,23 @@
+{
+  "name": "workouts",
+  "slug": "workouts",
+  "extra": {
+    "eas": {
+      "projectId": "6151a6cd-87a1-4a19-86fe-7262b7e8f376"
+    }
+  },
+  "expo": {
+    "android": {
+      "package": "com.warrenwest.workouts"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6151a6cd-87a1-4a19-86fe-7262b7e8f376"
+      }
+    },
+    "plugins": [
+      "expo-font",
+      "expo-audio"
+    ]
+  }
+}

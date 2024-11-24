@@ -1,20 +1,3 @@
-// workout schema:
-/* 
-    [ 
-        { 
-            workoutTitle: string,
-            repRangeLo: number
-            repRangeHi: number
-            setRangeLo: number
-            setRangeHi: number
-            restRangeLo: number
-            restRangeHi: number
-        }, 
-        {...},
-        ...
-    ]
-*/
-
 const PUSH = {
     id: 1,
     title: "Push",
